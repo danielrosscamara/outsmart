@@ -83,6 +83,16 @@ The prototype smart outlet unit consists of the following components:
 
 ---
 
+## Firmware & IoT Integration
+
+The microcontroller firmware is located in [`outsmart_esp_32/`](outsmart_esp_32/outsmart_esp_32.ino):
+- **Sensor Polling:** Reads AC line voltage, current, active power, and power factor from the PZEM-004T sensor over software serial.
+- **Firebase Synchronization:** Uses `Firebase_ESP_Client` to stream real-time telemetry to the Firebase Realtime Database path (`/Outlets/outlet1`) every second.
+- **Relay Actuation:** Subscribes to real-time state changes from the web application to switch the solid-state relay on GPIO 4.
+- **Latency Monitoring:** Tracks round-trip read and send latency for connection diagnostics.
+
+---
+
 ## Key Features
 
 ### Real-Time Monitoring & Quick Controls
@@ -124,7 +134,8 @@ The prototype smart outlet unit consists of the following components:
 ## Tech Stack
 
 - **Frontend**: HTML5, Bootstrap 5, Custom CSS, JavaScript (ES6 Modules)
-- **Backend**: Firebase Realtime Database (RTDB), Firebase Authentication
+- **Backend / Cloud**: Firebase Realtime Database (RTDB), Firebase Authentication
+- **Firmware**: Arduino C++ (`Firebase_ESP_Client`, `PZEM004Tv30`, `SoftwareSerial`)
 - **External Libraries**:
   - `html5-qrcode` for QR code camera scanning
   - `bootstrap-clockpicker` for schedule and timer selection
@@ -149,6 +160,8 @@ outsmart/
 ├── vercel.json          # Vercel deployment configuration
 ├── .gitignore           # Git ignore rules for OS and IDE files
 ├── OutSmart.bsdesign    # Bootstrap Studio design project file
+├── outsmart_esp_32/     # Microcontroller firmware (Arduino / ESP32)
+│   └── outsmart_esp_32.ino
 ├── context/             # Hardware schematics, user guides, and thesis documentation
 └── assets/
     ├── bootstrap/       # Bootstrap CSS and JS bundles
