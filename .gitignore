@@ -29,3 +29,10 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+# Internal Thesis Context & Reference Documents
+context/
+
+# Firmware Build Artifacts
+outsmart_esp_32/build/
+build/
