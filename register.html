@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="assets/css/Analog_Clock.css">
+    <link rel="stylesheet" href="assets/css/Clock-Real-Time-real-time-clock.css">
+    <link rel="stylesheet" href="assets/css/Clock-Real-Time.css">
+    <link rel="stylesheet" href="assets/css/Features-Image-icons.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch-toggle-switch.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch.css">
+    <link rel="stylesheet" href="assets/css/clockpicker.css">
+    <link rel="stylesheet" href="assets/css/standalone.css">
+    <link rel="stylesheet" href="assets/css/billestimator.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/mobile-swap-nav.css">
+    <link rel="stylesheet" href="assets/css/mobile-ui.css">
+    <link rel="stylesheet" href="assets/css/notification.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+</head>
+
+<body class="bg-gradient-primary" style="background:linear-gradient(90deg, black 43%, #c89116), transparent;">
+    <div class="container">
+        <div class="card border-0 shadow-lg my-5 o-hidden">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-flex" style="background:#000000;">
+                        <div class="flex-grow-1 bg-register-image" style="background:url(&quot;assets/img/OutSmart_Icon-removebg-preview.png&quot;) center / contain no-repeat, #000000;"></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="text-dark mb-4">Create an Account!</h4>
+                            </div>
+                            <form id="register-form" class="user">
+                                <div class="row mb-3"><input class="form-control form-control-user" type="text" id="username" placeholder="Username" aria-describedby="emailHelp" name="username" required=""></div>
+                                <div class="row mb-3"><input class="form-control form-control-user" type="email" id="email" aria-describedby="emailHelp" placeholder="Email" name="email" required=""></div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control form-control-user" type="password" id="password" name="password" placeholder="Password" required=""></div>
+                                    <div class="col-sm-6"><input class="form-control form-control form-control-user" type="password" id="register-password-repeat" name="password_repeat" placeholder="Repeat Password" required=""></div>
+                                </div>
+                                <div class="mb-3" id="message"></div><button class="btn btn-primary d-block w-100 btn-user" id="register-submit-button" type="submit">Register Account</button>
+                                <hr><a class="btn btn-primary d-block w-100 mb-2 btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Register with Google</a><a class="btn btn-primary d-block w-100 btn-facebook btn-user" role="button"><i class="fab fa-facebook-f"></i>&nbsp; Register with Facebook</a>
+                                <hr>
+                            </form>
+                            <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>
+                            <div class="text-center"><a class="small" href="login.html">Already have an account? Login!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.js"></script>
+    <script src="assets/js/Fire.mjs" type="module"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="assets/js/scanner-library.js"></script>
+    <script src="assets/js/clockpicker.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/mobile-swipe-nav.js"></script>
+</body>
+
+</html>
