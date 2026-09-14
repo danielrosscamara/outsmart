@@ -15,6 +15,30 @@ appliances, it simplifies energy management while promoting convenience and effi
 
 ---
 
+## User Interface
+
+<p align="center">
+  <img src="assets/img/ui%20img/dashboard%20page.png" alt="OutSmart Dashboard" width="85%" />
+  <br>
+  <em>Figure 1: Main Dashboard with real-time telemetry stream and control panel</em>
+</p>
+
+### Interface Gallery
+
+| Outlets Management | Bill Estimator |
+| :---: | :---: |
+| <img src="assets/img/ui%20img/outlets%20page.png" alt="Outlets Page" width="100%" /> | <img src="assets/img/ui%20img/bill%20estimator.png" alt="Bill Estimator" width="100%" /> |
+
+| Settings & Schedules | Notification History |
+| :---: | :---: |
+| <img src="assets/img/ui%20img/settings%20page.png" alt="Settings Page" width="100%" /> | <img src="assets/img/ui%20img/notification%20page.png" alt="Notification Page" width="100%" /> |
+
+| Authentication | Account Profile |
+| :---: | :---: |
+| <img src="assets/img/ui%20img/sign%20in%20page.png" alt="Sign In Page" width="100%" /> | <img src="assets/img/ui%20img/account%20page.png" alt="Account Page" width="100%" /> |
+
+---
+
 ## System Architecture
 
 ```mermaid
