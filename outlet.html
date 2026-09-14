@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" data-bss-forced-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Outlets - OutSmart</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="assets/css/Analog_Clock.css">
+    <link rel="stylesheet" href="assets/css/Clock-Real-Time-real-time-clock.css">
+    <link rel="stylesheet" href="assets/css/Clock-Real-Time.css">
+    <link rel="stylesheet" href="assets/css/Features-Image-icons.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch-toggle-switch.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switch.css">
+    <link rel="stylesheet" href="assets/css/clockpicker.css">
+    <link rel="stylesheet" href="assets/css/standalone.css">
+    <link rel="stylesheet" href="assets/css/billestimator.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/mobile-swap-nav.css">
+    <link rel="stylesheet" href="assets/css/mobile-ui.css">
+    <link rel="stylesheet" href="assets/css/notification.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar align-items-start p-0 sidebar sidebar-dark accordion bg-gradient-primary navbar-dark" style="--bs-secondary:#3b3b3b;--bs-secondary-rgb:59,59,59;background:var(--bs-secondary);width:150px;max-width:100%;">
+            <div class="container-fluid"><a class="navbar-brand d-flex justify-content-center align-items-center m-0 sidebar-brand" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15" style="transform:rotate(0deg);"><img width="50" height="50" src="assets/img/OutSmart_Icon_50x50px-removebg-preview.png"></div>
+                    <div class="mx-3 sidebar-brand-text"><span>Outsmart</span></div>
+                </a>
+                <hr class="my-0 sidebar-divider">
+                <ul class="navbar-nav text-light d-flex h-100 flex-column" id="accordionSidebar" style="width:150px;">
+                    <li class="nav-item"><a class="nav-link" href="/index.html"><i class="fas fa-tachometer-alt"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/Outlet.html"><i class="icon ion-outlet"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Outlets</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/billestimator.html"><i class="far fa-money-bill-alt"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Bill Estimator</span></a><a class="nav-link" href="notification.html"><i class="fas fa-bell"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Notification</span></a></li>
+                    <li class="nav-item mt-auto"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Account</span></a><a class="nav-link" href="/settings.html"><i class="far fa-user-circle"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Settings</span></a><a class="nav-link" href="help.html"><svg class="bi bi-question-circle" fill="currentColor" height="1em" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"></path></svg><span style="font-family:'Bricolage Grotesque', sans-serif;">Help</span></a><a class="nav-link" href="/login.html" id="logout-button"><svg class="bi bi-door-open" fill="currentColor" height="1em" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path><path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path></svg><span style="font-family:'Bricolage Grotesque', sans-serif;">Log Out</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="sidebar-overlay"></div>
+        <div class="d-flex flex-column flex-grow-1" id="content-wrapper">
+            <div id="content-flex" style="background: var(--bs-gray-700);border: 1px solid black;height: 1080px;">
+                <nav class="navbar navbar-expand bg-secondary shadow mb-4 topbar" style="background:#3b3b3b;--bs-secondary:#3b3b3b;--bs-secondary-rgb:59,59,59;">
+                    <div class="container-fluid">
+                        <h1 id="welcome-message" style="color:rgb(252,252,254);font-family:'Bricolage Grotesque', sans-serif;font-size:25px;">Welcome back</h1>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item text-end mb-0 dropdown no-arrow">
+                                <div>
+                                    <div class="col-auto" style="padding:0px;padding-right:0px;padding-left:0px;margin-top:auto;padding-top:14px;"><span class="text-center d-flex d-lg-inline me-2 text-gray-600 small" id="username-display" style="font-family:'Bricolage Grotesque';font-size:14px;font-weight:bold;color:var(--bs-light);text-align:right;"></span></div>
+                                    <div class="col" style="text-align:right;"><span class="text-start" style="font-family:'Bricolage Grotesque';font-weight:bold;color:var(--bs-light);">Admin</span></div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><img class="rounded-circle border img-profile" src="assets/img/artworks-YDQOy2Pru5CA2rhs-x1uzgA-t500x500.jpg"></a>
+                                    <div class="shadow dropdown-menu dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user me-2 fa-sm fa-fw text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs me-2 fa-sm fa-fw text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list me-2 fa-sm fa-fw text-gray-400"></i>&nbsp;Activity log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" id="logout-button-dropdown" href="/login.html"><i class="fas fa-sign-out-alt me-2 fa-sm fa-fw text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid" style="margin-bottom: 0px;">
+                    <div class="card shadow" style="background: transparent;border-color: var(--bs-info-bg-subtle);">
+                        <div class="card-header py-3" style="background: transparent;">
+                            <p class="fw-bold m-0" style="color: white;">Outlet Management</p>
+                        </div>
+                        <div class="card-body" style="border-color: var(--bs-info-bg-subtle);">
+                            <div class="table-responsive mt-2 table" id="dataTable" role="grid" aria-describedby="dataTable_info" style="border-radius: 0px;border-top-left-radius: 22px;border-top-right-radius: 22px;">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Outlet</th>
+                                            <th>Watts</th>
+                                            <th>Current</th>
+                                            <th>Voltage</th>
+                                            <th>Power Factor</th>
+                                            <th>Read Latency ms</th>
+                                            <th>Send Latency ms</th>
+                                            <th class="text-center">Rename</th>
+                                            <th class="text-center">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="outlet-management-body">
+                                        <tr>
+                                            <td class="text-center" colspan="9">Loading outlets...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="rename-outlet-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Rename Outlet</h4><button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter a new name for the outlet: <strong id="rename-outlet-id-display"></strong></p><input type="text" class="form-control" id="new-outlet-name-input" placeholder="e.g., Living Room Fan">
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-light" data-bs-dismiss="modal" type="button">Cancel</button><button class="btn btn-primary" id="save-new-name-button" type="button">Save</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="qr-scanner-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Scan QR Code</h4><button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="qr-reader" style="width:100%;"></div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-light" data-bs-dismiss="modal" type="button">Cancel</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clockpicker/0.0.7/bootstrap-clockpicker.min.js"></script>
+    <script src="assets/js/Fire.mjs" type="module"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="assets/js/scanner-library.js"></script>
+    <script src="assets/js/clockpicker.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/mobile-swipe-nav.js"></script>
+</body>
+
+</html>
