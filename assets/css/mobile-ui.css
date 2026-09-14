@@ -1,0 +1,40 @@
+@media (min-width: 992px) {
+  .hide-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #out {
+    /*display: inline;*/
+  }
+}
+
+option {
+}
+
+#accordionSidebar {
+}
+
+#accordionSidebar {
+}
+
+@media (min-width: 149px) {
+  .sidebar.sidebar-dark.accordion.bg-gradient-primary {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar.sidebar-dark.accordion.bg-gradient-primary {
+    display: flex !important;
+  }
+}
+
+.sidebar.sidebar-dark.accordion.bg-gradient-primary {
+}
+
+html, body, #wrapper {
+  height: 100%;
+}
+

@@ -1,0 +1,22 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e3e6f0;
+}
+
+.card-header {
+  background-color: #f8f9fc;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.danger-zone .card-header {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.danger-zone {
+  border-color: #f5c6cb;
+}
+

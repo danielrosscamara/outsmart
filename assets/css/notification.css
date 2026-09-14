@@ -1,0 +1,29 @@
+/* Add this to your CSS file */
+
+/* Style for the main container holding all notifications */
+
+#notification-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+/* This is the style for each individual notification box */
+
+.notification-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  color: #4A4A4A;
+}
+
+/* Style for the bold text (e.g., "Outlet 1") */
+
+.notification-item strong {
+  font-weight: 600;
+  color: #000000;
+}
+

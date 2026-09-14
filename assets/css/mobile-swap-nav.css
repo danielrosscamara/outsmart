@@ -1,0 +1,48 @@
+/* --- Swipe-to-Reveal Sidebar Styles --- */
+
+/* 1. Position the sidebar off-screen to the left */
+
+@media (max-width: 767px) {
+  #wrapper .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex !important;
+  }
+}
+
+/* 2. When the wrapper has the 'sidebar-toggled' class, slide the sidebar in */
+
+@media (max-width: 767px) {
+  #wrapper.sidebar-toggled .sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* 3. Style for the overlay that appears over the content */
+
+@media (max-width: 767px) {
+  #sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+  }
+}
+
+/* 4. Show the overlay when the sidebar is toggled */
+
+@media (max-width: 767px) {
+  #wrapper.sidebar-toggled #sidebar-overlay {
+    display: block;
+  }
+}
+

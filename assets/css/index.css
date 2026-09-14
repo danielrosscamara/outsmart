@@ -1,0 +1,15 @@
+#outlet-table-body td {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+#outlet-table-body td small {
+  font-weight: normal;
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+#content-wrapper > .container {
+  flex-grow: 1;
+}
+

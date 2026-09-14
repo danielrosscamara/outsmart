@@ -1,0 +1,113 @@
+.bill-estimator-card, .balance-card, .set-kwh-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bill-estimator-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.bill-estimator-card h3, .balance-card h4, .set-kwh-card h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.sort-by select {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: #f0ad4e;
+}
+
+.table-responsive {
+  margin-top: 15px;
+}
+
+.table thead th {
+  background-color: #f0ad4e;
+  color: #3b3b3b;
+  border: none;
+}
+
+.table tbody tr td {
+  vertical-align: middle;
+}
+
+.table tbody tr td small {
+  display: block;
+  color: #999;
+}
+
+.cost {
+  color: #f0ad4e;
+  font-weight: bold;
+}
+
+.show-more {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.show-more a {
+  color: #f0ad4e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.balance-card .total-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0ad4e;
+  padding: 20px;
+  border-radius: 10px;
+  color: #3b3b3b;
+}
+
+.balance-amount .amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.balance-amount .amount .cents {
+  font-size: 1.5rem;
+}
+
+.balance-card .date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  color: #999;
+}
+
+.set-kwh-card {
+  text-align: center;
+}
+
+.kwh-rate {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.per-kwh {
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.set-button {
+  background-color: #f0ad4e;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+}
+
