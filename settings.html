@@ -29,25 +29,29 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
-<body id="page-top">
-    <div id="wrapper">
-        <nav class="navbar align-items-start p-0 sidebar sidebar-dark accordion bg-gradient-primary navbar-dark" style="--bs-secondary:#3b3b3b;--bs-secondary-rgb:59,59,59;background:var(--bs-secondary);width:150px;max-width:100%;">
+<body id="page-top" style="background:var(--bs-gray-700);min-height:100vh;">
+    <div id="wrapper" style="background:var(--bs-gray-700);min-height:100vh;display:flex;">
+        <nav class="navbar align-items-start p-0 sidebar sidebar-dark accordion bg-gradient-primary navbar-dark" style="--bs-secondary:#3b3b3b;--bs-secondary-rgb:59,59,59;background:var(--bs-secondary);width:150px;max-width:100%;min-height:100vh;flex-shrink:0;">
             <div class="container-fluid"><a class="navbar-brand d-flex justify-content-center align-items-center m-0 sidebar-brand" href="#">
                     <div class="sidebar-brand-icon rotate-n-15" style="transform:rotate(0deg);"><img width="50" height="50" src="assets/img/OutSmart_Icon_50x50px-removebg-preview.png"></div>
                     <div class="mx-3 sidebar-brand-text"><span>Outsmart</span></div>
                 </a>
                 <hr class="my-0 sidebar-divider">
-                <ul class="navbar-nav text-light d-flex h-100 flex-column" id="accordionSidebar" style="width:150px;">
+                <ul class="navbar-nav text-light d-flex flex-column" id="accordionSidebar" style="width:150px;">
                     <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="outlet.html"><i class="icon ion-outlet"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Outlets</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="billestimator.html"><i class="far fa-money-bill-alt"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Bill Estimator</span></a></li>
-                    <li class="nav-item mt-auto"><a class="nav-link" href="notification.html"><i class="fas fa-bell"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Notification</span></a><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Account</span></a><a class="nav-link active" href="settings.html"><i class="far fa-user-circle"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Settings</span></a><a class="nav-link" href="help.html"><svg class="bi bi-question-circle" fill="currentColor" height="1em" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"></path></svg><span style="font-family:'Bricolage Grotesque', sans-serif;">Help</span></a><a class="nav-link" href="#" id="logout-button"><svg class="bi bi-door-open" fill="currentColor" height="1em" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path><path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path></svg><span style="font-family:'Bricolage Grotesque', sans-serif;">Log Out</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="notification.html"><i class="fas fa-bell"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Notification</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Account</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="settings.html"><i class="far fa-user-circle"></i><span style="font-family:'Bricolage Grotesque', sans-serif;">Settings</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html"><svg class="bi bi-question-circle" fill="currentColor" height="1em" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"></path></svg><span style="font-family:'Bricolage Grotesque', sans-serif;">Help</span></a></li>
+                    <li class="nav-item mt-3"><a class="nav-link" href="#" id="logout-button"><svg class="bi bi-door-open" fill="currentColor" height="1em" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"></path><path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"></path></svg><span style="font-family:'Bricolage Grotesque', sans-serif;">Log Out</span></a></li>
                 </ul>
             </div>
         </nav>
         <div id="sidebar-overlay"></div>
-        <div class="d-flex flex-column flex-grow-1" id="content-wrapper">
-            <div id="content-flex" style="background:var(--bs-gray-700);border:1px solid black;min-height:100vh;">
+        <div class="d-flex flex-column flex-grow-1" id="content-wrapper" style="background:var(--bs-gray-700);min-height:100vh;">
+            <div id="content-flex" style="background:var(--bs-gray-700);border:1px solid black;min-height:100%;flex:1;padding-bottom:50px;">
                 <nav class="bg-secondary navbar navbar-expand shadow mb-4 topbar" style="background:#3b3b3b;--bs-secondary:#3b3b3b;--bs-secondary-rgb:59,59,59;">
                     <div class="container-fluid">
                         <h1 id="welcome-message" style="color:rgb(252,252,254);font-family:'Bricolage Grotesque', sans-serif;font-size:25px;">Welcome back</h1>
