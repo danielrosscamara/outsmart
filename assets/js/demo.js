@@ -8,6 +8,17 @@
   'use strict';
 
   const STORAGE_KEY = 'outsmart_demo_state';
+  const AUTH_KEY = 'outsmart_demo_authenticated';
+
+  // --- AUTHENTICATION SESSION GUARD ---
+  const currentPath = window.location.pathname.toLowerCase();
+  const isAuthPage = currentPath.includes('login') || currentPath.includes('register') || currentPath.includes('forgot-password');
+  const isAuthenticated = sessionStorage.getItem(AUTH_KEY) === 'true';
+
+  if (!isAuthPage && !isAuthenticated) {
+    window.location.replace('login.html');
+    return;
+  }
 
   const DEFAULT_STATE = {
     user: {
@@ -97,6 +108,7 @@
       if (btn) {
         btn.addEventListener('click', function (e) {
           e.preventDefault();
+          sessionStorage.removeItem(AUTH_KEY);
           window.location.href = 'login.html';
         });
       }
@@ -440,6 +452,7 @@
 
       loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
+        sessionStorage.setItem(AUTH_KEY, 'true');
         window.location.href = 'index.html';
       });
     }
