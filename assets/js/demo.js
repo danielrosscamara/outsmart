@@ -432,10 +432,10 @@
   function initAuthPages() {
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
-      // Add a friendly demo notification banner
+      // Demo mode banner
       const banner = document.createElement('div');
-      banner.className = 'alert alert-info py-2 px-3 mb-3 small text-center';
-      banner.innerHTML = '⚡ <strong>Demo Mode Active:</strong> Click Login to explore without entering credentials.';
+      banner.className = 'alert alert-info py-2 px-3 mb-3 text-center fw-bold';
+      banner.textContent = 'Demo Mode';
       loginForm.prepend(banner);
 
       loginForm.addEventListener('submit', function (e) {
@@ -461,6 +461,77 @@
 
     if (usernameInput) usernameInput.value = state.user.username;
     if (emailInput) emailInput.value = state.user.email;
+
+    // Render "My Owned Outlets" on Settings page
+    const settingsTableBody = document.getElementById('outlet-settings-table-body');
+    if (settingsTableBody) {
+      settingsTableBody.innerHTML = '';
+      Object.values(state.outlets).forEach(o => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="align-middle" style="color:var(--bs-light);"><strong>${o.name}</strong></td>
+          <td class="text-end">
+            <button class="btn btn-sm btn-primary me-2 schedule-btn" data-id="${o.id}">Schedule</button>
+            <button class="btn btn-sm btn-info text-white idle-btn" data-id="${o.id}">Idle Settings</button>
+          </td>
+        `;
+        settingsTableBody.appendChild(tr);
+
+        tr.querySelector('.schedule-btn').addEventListener('click', function () {
+          openScheduleModal(o.id);
+        });
+
+        tr.querySelector('.idle-btn').addEventListener('click', function () {
+          openIdleModal(o.id);
+        });
+      });
+    }
+
+    const saveIdleBtn = document.getElementById('save-idle-config-button');
+    if (saveIdleBtn) {
+      saveIdleBtn.addEventListener('click', function () {
+        const modalEl = document.getElementById('idle-config-modal');
+        if (modalEl && window.bootstrap) {
+          bootstrap.Modal.getInstance(modalEl)?.hide();
+        }
+      });
+    }
+  }
+
+  function openScheduleModal(id) {
+    const nameEl = document.getElementById('schedule-outlet-name');
+    if (nameEl) nameEl.textContent = state.outlets[id]?.name || id;
+
+    const existingBody = document.getElementById('existing-schedules-body');
+    if (existingBody) {
+      existingBody.innerHTML = `
+        <tr>
+          <td><span class="badge bg-success">Active</span></td>
+          <td>Turn ON</td>
+          <td>08:00</td>
+          <td>Mon, Tue, Wed, Thu, Fri</td>
+          <td><button class="btn btn-sm btn-outline-danger" onclick="this.closest('tr').remove()"><i class="fas fa-trash"></i></button></td>
+        </tr>
+      `;
+    }
+
+    const modalEl = document.getElementById('schedule-modal');
+    if (modalEl && window.bootstrap) {
+      new bootstrap.Modal(modalEl).show();
+    }
+  }
+
+  function openIdleModal(id) {
+    const nameEl = document.getElementById('idle-outlet-name');
+    if (nameEl) nameEl.textContent = state.outlets[id]?.name || id;
+
+    const switchEl = document.getElementById('idle-enabled-switch');
+    if (switchEl) switchEl.checked = true;
+
+    const modalEl = document.getElementById('idle-config-modal');
+    if (modalEl && window.bootstrap) {
+      new bootstrap.Modal(modalEl).show();
+    }
   }
 
   // --- REAL-TIME SIMULATION TICKER ---
